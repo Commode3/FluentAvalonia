@@ -54,7 +54,7 @@ jobs:
       - name: Build project
         run: |
           dotnet build "${{ env.MAIN_CSPROJ }}" \
-            /p:NoWarn=CS1591
+            /p:NoWarn=CS1591 \
             --configuration Release \
             --no-restore
 
