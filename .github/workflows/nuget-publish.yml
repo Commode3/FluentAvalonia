@@ -62,7 +62,7 @@ jobs:
       - name: Pack project into NuGet package
         run: |
           dotnet pack "${{ env.MAIN_CSPROJ }}" \
-            /p:Name=Redcft.FluentAvalonia \
+            /p:PackageId=Redcft.FluentAvalonia \
             /p:VersionSuffix=${{ env.PACKAGE_VERSION_SUFFIX }} \
             --configuration Release \
             --no-build \
