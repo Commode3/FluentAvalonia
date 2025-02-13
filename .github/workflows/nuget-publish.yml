@@ -71,5 +71,6 @@ jobs:
       - name: Publish NuGet package to GitHub Packages
         run: |
           dotnet nuget push ./nupkgs/*.nupkg \
+            --api-key ${{ secrets.GITHUB_TOKEN }} \
             --source "${{ env.NUGET_GPR_URL }}" \
             --timeout 60
